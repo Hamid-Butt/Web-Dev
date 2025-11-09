@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Token Manager</title>
 </head>
+
 <body>
-   <button>Click Me!</button> 
+    <button>Click Me!</button>
     <script>
-        function setAuthToken(user){
-            localStorage.setItem("userInfo",JSON.stringify(user));
-            let data =  localStorage.getItem("userInfo");
-            data = JSON.parse(data);
-            if(Date.now() < (data.time + 60*60*1000)){
-                console.log(data);
-            }else{
-                console.log("Data Has Been EXPIRED!!!")
-            }
-            
+        function setAuthToken(user) {
+            localStorage.setItem("userInfo", JSON.stringify(user));
+           console.log("Token has been successfully stored!!")
+
         }
 
-        let key = 'authUser';
         let token;
         let btn = document.querySelector("button");
-        let user = { 
-            time : Date.now(),
+        let user = {
+            time: Date.now(),
         }
 
-        btn.addEventListener("click",()=>{
-           user[key]  = prompt("Enter Authorization Token:"); 
-        setAuthToken(user);
-         });
+        btn.addEventListener("click", () => {
+            let existingToken = localStorage.getItem("userInfo");
+            if (existingToken) {
+                let fetchedData = JSON.parse(existingToken);
+                if (Date.now() < fetchedData.time + 1000 * 60 * 60)
+                    console.log(fetchedData.authUser);
+                else{
+                    console.log("Token has been expired");
+                    localStorage.removeItem("userInfo");
+                }
+            }
+             else {
+                token = prompt("Enter Authorization Token:");
+                user.authUser = token;
+                setAuthToken(user);
+            }
+        });
     </script>
 </body>
+
 </html>
