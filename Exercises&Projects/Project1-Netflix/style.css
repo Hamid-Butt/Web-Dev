@@ -1,0 +1,438 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", "Roboto", "Ubuntu", "sans-serif";
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    width: 100vw;
+    height: 92vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url("images/PK-en-20250630-TRIFECTA-perspective_5356347d-e8b8-498a-898c-afc917f9fcad_large.jpg");
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.dark {
+    width: 100vw;
+    height: 92vh;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vh;
+    width: 100%;
+    margin: 0 auto;
+    gap: 14vw;
+    position: relative;
+    z-index: 1;
+    top: 0;
+}
+
+nav>img {
+    width: 150px;
+}
+
+.signIn {
+    padding: 0.4rem;
+    width: 4rem;
+    text-align: center;
+    border-radius: 10%;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    background-color: #c90d16;
+}
+
+.signIn:hover {
+    cursor: pointer;
+    background-color: #c90d16b2;
+}
+
+.hero {
+    width: 670px;
+    box-sizing: border-box;
+    padding: 0 32px 32px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    margin: 26vh auto 0;
+    /* border: 2px solid; */
+}
+
+.hero-p1 {
+    font-size: 56px;
+    text-align: center;
+    line-height: 80px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    /* border: 2px solid; */
+}
+
+.hero-p2 {
+    font-weight: 500;
+    margin-bottom: 32px;
+    font-size: 20px;
+}
+
+.hero-p3 {
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+.hero-Email {
+    position: relative;
+    /* height: 60px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hero-Email input {
+    height: 55px;
+    width: 380px;
+    color: white;
+    font-weight: 500;
+    border: 1px solid #c8c9ca;
+    border-radius: 3px;
+    padding: 0 10px 5px 13px;
+    margin-right: 8px;
+    opacity: 0.7;
+    box-sizing: border-box;
+    background-color: rgba(23, 23, 23, 1);
+    font-size: 16px;
+}
+
+.hero-Email input::placeholder {
+    color: white;
+    font-weight: 500;
+}
+
+.hero-Email button {
+    height: 55px;
+    width: 200px;
+    color: white;
+    background-color: red;
+    border-radius: 3px;
+    border: none;
+    font-size: 23px;
+    font-weight: 650;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+.hero-Email button:hover {
+    cursor: pointer;
+    background-color: #d80b15ec;
+}
+
+.separator {
+    height: 8px;
+    background-color: gray;
+}
+
+.trendingSec,
+.reasonSec {
+    color: white;
+    width: 1200px;
+    margin: auto;
+
+}
+
+.trendingSec>p,
+.reasonSec>p {
+    font-weight: 700;
+    font-size: 32px;
+    margin: 50px 0 30px;
+}
+
+.trendingSec-list {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 20px 0 70px 0;
+}
+
+.trendingSec-img {
+    height: 300px;
+    width: 215px;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ti-1:hover,
+.ti-2:hover,
+.ti-3:hover,
+.ti-4:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.reasonSec-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.reasonSec-list-item {
+    width: 275px;
+    background-image: linear-gradient(to right, rgb(45, 45, 88), #20121f);
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.reasonSec-list-item>div:nth-child(1) {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.reasonSec-list-item>div:nth-child(2) {
+    color: #9696a2;
+    margin-bottom: 80px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (max-width : 1400px) {
+    .reasonSec {
+        width: 1000px;
+
+    }
+
+    .reasonSec-list {
+        flex-wrap: wrap;
+    }
+
+    .reasonSec-list-item {
+        width: 440px;
+    }
+
+    .trendingSec>p,
+    .reasonSec>p {
+
+        margin: 30px 0 30px 60px;
+    }
+
+}
+
+@media screen and (max-width : 1200px) {
+    .trendingSec {
+        width: 1000px;
+    }
+
+}
+
+@media screen and (max-width : 1080px) {
+    .hero {
+        width: 580px;
+    }
+
+    .hero-p1 {
+        font-size: 40px;
+        width: 470px;
+        line-height: normal;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .hero-p2 {
+        margin-bottom: 24px;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .hero-p3 {
+        font-weight: 500;
+        margin-bottom: 18px;
+    }
+
+    .hero-Email input {
+        width: 309px;
+    }
+
+    .hero-Email button {
+        height: 55px;
+        width: 170px;
+        font-size: 20px;
+    }
+
+    .trendingSec {
+        width: 800px;
+    }
+
+    .trendingSec>p,
+    .reasonSec>p {
+        font-weight: 700;
+        font-size: 30px;
+        margin: 30px 0 30px 60px;
+    }
+
+    .trendingSec-img {
+        height: 250px;
+        width: 180px;
+    }
+}
+
+@media screen and (max-width : 1000px) {
+    .ti-4 {
+        display: none;
+    }
+
+    .trendingSec,
+    .reasonSec {
+        width: 800px;
+    }
+
+    .reasonSec-list-item {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width : 800px) {
+    nav>img {
+        width: 175px;
+    }
+
+    .trendingSec,
+    .reasonSec {
+        width: 600px;
+    }
+
+    .reasonSec-list-item {
+        width: 500px;
+    }
+
+    .trendingSec>p,
+    .reasonSec>p {
+        font-weight: bold;
+        font-size: 24px;
+        margin: 50px 0 10px;
+    }
+}
+
+@media screen and (max-width : 620px) {
+
+    .hero {
+        width: 450px;
+        padding: 0px;
+        margin: 26vh auto 0;
+    }
+
+    .hero-p1 {
+        font-size: 40px;
+        width: 400px;
+    }
+
+    .hero-p2 {
+        margin-bottom: 24px;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .hero-p3 {
+        font-weight: 500;
+        margin-bottom: 18px;
+    }
+
+    .hero-Email {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .trendingSec,
+    .reasonSec {
+        width: 400px;
+    }
+
+    .ti-3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width : 450px) {
+    .hero {
+        width: 400px;
+        margin: 16vh auto 0;
+    }
+
+    .hero-p1 {
+        width: 350px;
+        line-height: 50px;
+    }
+
+    .hero-p3 {
+        width: 350px;
+
+    }
+
+    .hero-p2 {
+        margin-bottom: 15px;
+    }
+
+    .trendingSec,
+    .reasonSec {
+        width: 400px;
+    }
+
+    .reasonSec-list-item {
+        width: 350px;
+    }
+
+    .trendingSec-img {
+        height: 230px;
+        width: 165px;
+    }
+}
+@media screen and (max-width : 400px) {
+   
+        nav>img {
+        width: 150px;
+    }
+    .hero{
+        width: 275px;
+    }
+    .hero-p1 {
+        width: 275px;
+font-size: 32px;     
+    }
+    .hero-p3{
+        width: 280px;
+    }
+.trendingSec,
+    .reasonSec {
+        width: 300px;
+    }
+    .ti-2{
+        display: none;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validator</title>
+</head>
+
+<body>
+    <script>
+        let criteria = "Plz fulfill criteria";
+        let str = prompt("Enter Password");
+        let strSpliter = str.split("");
+        let strLength = str.length;
+        if (strLength >= 8) {
+            let upper = false, lower = false, digit = false;
+            let charCode;
+            strSpliter.map(e => {
+                for (let i = 0; i < 1; i++) {
+                    charCode = e.charCodeAt(i);     // i ka purpose e (jo ka ek word ha) ka characters ka indexes to locate kar ke ascii code dena
+                    if ((charCode >= 65) && (charCode <= 90)) {
+                        upper = true;
+                    }
+
+                    if ((charCode >= 97) && (charCode <= 122)) {
+                        lower = true;
+                    }
+                    if ((charCode >= 48) && (charCode <= 57)) {
+                        digit = true;
+                    }
+                }
+            })
+            if ((upper == true) && (lower == true) && (digit == true))
+                console.log("Your Password Is Successfully Accepted");
+            else
+                console.log(criteria);
+        }
+        else {
+            console.log(criteria);
+        }
+
+    </script>
+</body>
+
+</html>

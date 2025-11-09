@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoping Cart Totalizer</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: rgba(23, 23, 94, 0.603);
+
+        }
+        nav{
+            margin: 0 auto;
+            height: 80px;
+            width: 60vw;
+        }
+        nav > ul{
+            font-size: large;
+            font-weight: 600;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        li{
+            padding: 5px;
+         cursor: pointer;
+            list-style: none;
+        }
+        ul > li:hover{
+            font-size: 20px;
+        }
+        .gallery{
+              box-shadow: 0px 3px 0px;             
+        }
+        main{
+            height: calc(100vh - 80px);
+             background-color: rgba(23, 23, 94, 0.235);
+             padding-top: 20px;
+
+        }
+        .mainContainer{
+            background-color: white;
+            height: calc(100vh - 120px);
+            width:  calc(100vw - 40px);
+            margin: 0 auto;
+        }
+        .grid{
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+
+        }
+        .item{
+            background-color: rgba(23, 23, 94, 0.575);
+               height: 200px;
+                width: 300px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+        }
+        .div{
+            margin: 20px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li class="gallery">Gallery</li>
+                <li>About Us</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="mainContainer">
+            <div class="grid">
+                <div class="item">
+                    <h3>HELICOPTER</h3>
+                    <img src="images/helicopter.jpg" width="100px" alt="">
+                    <button onclick="cartCollector(this)">Add To CART</button>
+                </div>
+                <div class="item">
+                    <h3>TRAIN</h3>
+                    <img src="images/train.jpg" width="100px" alt="">
+                    <button onclick="cartCollector(this)">Add To CART</button>
+
+                </div>
+                <div class="item">
+                    <h3>AIR PLANE</h3>
+                    <img src="images/plane.jpg" width="100px" alt="">
+                    <button onclick="cartCollector(this)">Add To CART</button>
+
+                </div>
+                <div class="item">
+                    <h3>CAR</h3>
+                    <img src="images/car.jpg" width="100px" alt="">
+                    <button onclick="cartCollector(this)">Add To CART</button>
+
+                </div>
+                <div class="item">
+                    <h3>DOLL</h3>
+                    <img src="images/doll.jpg" width="80px" alt="">
+                    <button onclick="cartCollector(this)">Add To CART</button>
+
+                </div>
+                <div class="item">
+                    <h3>CANDIES</h3>
+                    <img src="images/candies.jpg" width="100px" alt="">
+                    <button onclick="cartCollector(this)">Add To CART</button>
+
+                </div>
+                <div class="item">
+                    <h3>BISCUITS</h3>
+                    <img src="images/biscuits.jpg" width="100px" alt="">
+                    <button onclick="cartCollector(this)">Add To CART</button>
+
+                </div>
+                <div class="item">
+                    <h3>LANTERN</h3>
+                    <img src="images/lantern.jpg" width="80px" alt="">
+                    <button onclick="cartCollector(this)">Add To CART</button>
+
+                </div>
+            </div>
+            <aside>
+                <h2>CART</h2>
+            </aside>
+        </div>
+    </main>
+
+    <script>
+        let obj = [
+            {name : "helicopter", price:"1500"},
+            {name : "train", price:"2000"},
+            {name : "air plane", price:"1200"},
+            {name : "car", price:"350"},
+            {name : "doll", price:"250"},
+            {name : "candies", price:"150"},
+            {name : "biscuits", price:"350"},
+            {name : "lantern", price:"1000"},
+        ]
+        let sum = 0;
+        let aside = document.querySelector("aside");
+      
+       function cartCollector(button){
+        let item = button.closest(".item");
+        let h3 = item.querySelector("h3").innerText.toLowerCase();
+        obj.map(e=>{
+            if(h3 === e.name){
+                let oldDiv =  document.getElementsByClassName("div");
+                while(oldDiv.length >0){
+                    oldDiv[0].remove();
+                }
+            
+            let div = document.createElement("div");
+                  aside.insertAdjacentElement("beforeend",div);
+                sum += parseInt(e.price);
+                div.classList.add("div")
+                div.innerText = `Product Name : ${h3.toUpperCase()} \n  Price : ${e.price} \n Total : ${sum}`; 
+
+        }
+        })
+        
+                                                             
+       }
+    </script>
+</body>
+</html>

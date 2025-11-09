@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+</head>
+<body>
+    <script>     
+        let str = prompt("Enter String");
+        let strSpliter = str.split("");
+        let strLength = strSpliter.length;      
+        let charCode;
+        let flag = 0;
+        const vowel_ASCII = [65,69,73,79,85,97,101,105,111,117];
+            strSpliter.map(e => {
+                for (let i = 0; i < strLength; i++) {
+                    charCode = e.charCodeAt(i);
+                    vowel_ASCII.map(f=>{
+                        if(charCode == f)
+                        flag++;
+                    })
+                }
+            })
+                console.log(str,flag)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Double Trouble</title>
+</head>
+<body>
+    <script>
+        //square one term if consective terms are same
+        let arr = [12,23,3,3,45,4,3,2,2,1];
+        let arrDouble = [];
+        let size = arr.length;
+        for (let i = 0; i < size; i++) {
+         let j = i + 1;
+               if(arr[i]  == arr[j])
+               arrDouble.push(arr[i]);
+               else
+            arrDouble.push(arr[i]**2);
+        } 
+        console.log(arrDouble);
+    </script>
+</body>
+</html>

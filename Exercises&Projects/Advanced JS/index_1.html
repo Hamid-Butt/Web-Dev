@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Houses Selection</title>
+</head>
+
+<body>
+    <script>
+        let names = [];
+        let noOfStudents = Number(prompt("No. of Students:"));
+        for (let i = noOfStudents; i > 0; i--) {
+            names[i-1] = prompt('Enter Names');
+        }
+        names.map((e) => {
+            if (e.length < 6)
+                console.log(`${e} Gryffindor`);
+            else if (e.length < 8)
+                console.log(`${e} Hufflepuff`);
+            else if (e.length < 12)
+                console.log(`${e} Ravenclaw`);
+            else if (e.length >= 12)
+                console.log(`${e} Slytherin`);
+        });
+    </script>
+</body>
+
+</html>

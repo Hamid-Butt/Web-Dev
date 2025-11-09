@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise6</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Segoe UI";
+        }
+
+        nav {
+            margin-top: 5px;
+            height: 10vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+
+        .icon {
+            height: 80px;
+        }
+
+        .navContainer {
+            display: flex;
+        }
+
+        .items {
+            padding: .5vh;
+            margin: 2vh;
+            display: flex;
+        }
+
+        .items>img {
+            margin-left: 4px;
+        }
+
+        .rightNav {
+            display: flex;
+            align-items: center;
+        }
+
+        .rightNavItems {
+            margin: 10px;
+        }
+
+        .navButton {
+            border: 2.5px solid;
+            padding: 10px;
+            width: 90px;
+            text-align: center;
+            border-radius: 5%;
+            font-weight: bold;
+        }
+
+        .navButton:hover {
+            color: rgb(80, 80, 80);
+            border-color: rgb(80, 80, 80);
+            cursor: pointer;
+        }
+
+        .mainContainer {
+            height: 90vh;
+            width: 50vw;
+            margin: 2em auto;
+            /* background-color: red; */
+            display: grid;
+            gap: 1.7em;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        .item-1 {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        .item-2 {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        .item-3 {
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+
+        .item-4 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .item-5 {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        .item-6 {
+            grid-column: 3/4;
+            grid-row: 2/3;
+
+        }
+
+        .item-7 {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+
+        .item-8 {
+            grid-column: 2/3;
+            grid-row: 3/4;
+
+        }
+
+        .item-9 {
+            grid-column: 3/4;
+            grid-row: 3/4;
+
+        }
+
+        .item-10 {
+            grid-column: 1/2;
+            grid-row: 4/5;
+
+        }
+
+        .mainButton {
+            color: white;
+            font-size: 0.8em;
+            font-weight: 400;
+            /* border: 1px solid black; */
+            border-radius: 12%;
+            padding: 8px;
+            width: 9em;
+            text-align: center;
+            text-decoration: none;
+            background-color: rgb(12, 167, 12);
+        }
+
+        .mainItem {
+            /* border: 1px solid; */
+            background-color: #f7ebfc5e;
+            padding: 16px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        @media screen and (max-width: 1050px) {
+         .mainContainer{
+           grid-template-columns: 1fr ;   
+         }   
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img class="icon navItem" src="icon.png"></img>
+            <div class="navContainer navItem">
+                <div class="items">Products <img src="down arrow.png" alt=""></div>
+                <div class="items">Pricing <img src="down arrow.png" alt=""></div>
+                <div class="items">Resources <img src="down arrow.png" alt=""></div>
+                <div class="items">Our Comapny <img src="down arrow.png" alt=""></div>
+            </div>
+            <div class="rightNav">
+                <div class="rightNavItems navButton">BUY NOW</div>
+                <img class="rightNavItems" src="globe.png" alt=""><span class="rightNavItems">English</span><img
+                    class="rightNavItems" src="search.png" alt="">
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div class="mainContainer">
+            <div class="item-1 mainItem">
+                <div style="font-weight:600; font-size: 1.3em;">English </div>
+                <a class="mainButton" href="ue_english_64.exe">Download 64-bit</a>
+            </div>
+            <div class="item-2 mainItem">
+                <div style="font-weight:600; font-size: 1.3em;">English </div>
+                <a class="mainButton" href="ue_english_64.exe">Download 64-bit</a>
+            </div>
+            <div class="item-3 mainItem">
+                <div style="font-weight:600; font-size: 1.3em;">English </div>
+                <a class="mainButton" href="ue_english_64.exe">Download 64-bit</a>
+            </div>
+            <div class="item-4 mainItem">
+                <div style="font-weight:600; font-size: 1.3em;">English </div>
+                <a class="mainButton" href="ue_english_64.exe">Download 64-bit</a>
+            </div>
+            <div class="item-5 mainItem">
+                <div style="font-weight:600; font-size: 1.3em;">English </div>
+                <a class="mainButton" href="ue_english_64.exe">Download 64-bit</a>
+            </div>
+            <div class="item-6 mainItem">
+                <div style="font-weight:600; font-size: 1.3em;">English </div>
+                <a class="mainButton" href="ue_english_64.exe">Download 64-bit</a>
+            </div>
+            <div class="item-7 mainItem">
+                <div style="font-weight:600; font-size: 1.3em;">English </div>
+                <a class="mainButton" href="ue_english_64.exe">Download 64-bit</a>
+            </div>
+            <div class="item-8 mainItem">
+                <div style="font-weight:600; font-size: 1.3em;">English </div>
+                <a class="mainButton" href="ue_english_64.exe">Download 64-bit</a>
+            </div>
+            <div class="item-9 mainItem">
+                <div style="font-weight:600; font-size: 1.3em;">English </div>
+                <a class="mainButton" href="ue_english_64.exe">Download 64-bit</a>
+            </div>
+            <div class="item-10 mainItem">
+                <div style="font-weight:600; font-size: 1.3em;">English </div>
+                <a class="mainButton" href="ue_english_64.exe">Download 64-bit</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

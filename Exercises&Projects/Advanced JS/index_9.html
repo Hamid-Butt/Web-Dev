@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Shopper</title>
+</head>
+
+<body>
+    <button>Place An ORDER</button>
+    <script>
+      async function placeOrder() {
+        return new Promise((res, rej)=>{
+            setTimeout(() => {
+                res(confirmation);
+            }, 1000*random);
+        })
+        }
+            let confirmation = "Your Order Is Successfully Registered";        
+            let random = 2 + 3*Math.random();
+            let btn = document.querySelector("button");
+            btn.addEventListener("click", async (e) => {
+               let answer = await  placeOrder(); 
+               console.log(answer)
+            })
+    </script>
+</body>
+
+</html>

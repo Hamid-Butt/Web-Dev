@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Array Mapping</title>
+</head>
+<body>
+    <script>
+        async function mapped(arr){
+            return new Promise((res , rej )=>{
+                setTimeout(() => {
+                  const  result =  arr.map( e=>e*2);
+                    res(result);
+                }, 500);
+            })
+        }
+        
+        async function main() {
+            let arr = [];
+        let quantity = Number(prompt("Enter no. of Elements:"));
+        for (let i = 0; i < quantity; i++) {
+            arr.push(Number(prompt("Enter Numbers:")));;
+        }
+        let newArr = await mapped(arr);
+       console.log(newArr)
+         }
+        main();
+
+            //async ka sath await ya then use karta, jab await use karna then try/catch for handling binary problems and .then ka liye .then/ .catch
+    </script>
+</body>
+</html>

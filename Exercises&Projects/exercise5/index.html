@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4 | CSS</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: gray;
+            
+        }
+        header{
+             position: sticky;
+            top: 0px;
+        }
+        nav{
+            height: 100px;
+            width: 100%;
+           
+            background-color: pink;
+            
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            
+
+        }
+        nav ul li{
+            list-style: none;
+            padding: 20px;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+      .circle{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 13px;
+        right: 23px;
+        background-color: orange;
+      }
+      .container{
+        height: 500px;
+        margin: 10px;
+        background-color: green;
+        display: flex;
+        
+      }
+      .content::selection{
+        background-color: black;
+      }
+      .content{
+        height: 350px;
+        width: 350px;
+        background-color: blue;
+        margin: auto;
+        padding: 20px;
+        color: white;
+        box-sizing: border-box;
+        
+      }
+      .oval{
+        height: 350px;
+        background-color: #fff;
+        width: 90vw;
+        margin: auto;
+        border-radius: 10%;
+        font-size: 50px;
+        word-break: break-all;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 2px dotted black;
+        background-color: gray;
+      }
+      footer{
+        height: 100px;
+        background-color: #fff;
+        margin: 10px 0px 0px 0px;
+        box-sizing: border-box;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Content</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="circle"></div>
+        <div class="container">
+            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptate dolorum numquam omnis eos officiis pariatur quia delectus dolor debitis autem repellendus dolorem, libero eligendi culpa quo vel aperiam facilis quam provident repellat expedita earum. Error deserunt blanditiis voluptates odit officia numquam tempora rem, porro aut, sapiente inventore ab magnam illo ducimus saepe quia, eveniet non distinctio asperiores soluta. Maxime, itaque quis nam iusto velit voluptatem, facilis eligendi incidunt aperiam ratione in perferendis? Aut alias consequatur voluptatem, unde repellendus ducimus maiores. Repellat amet illo possimus ratione dolore, autem assumenda quos corporis quibusdam rem nostrum excepturi. Nobis repellendus distinctio natus alias!</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo praesentium repellendus modi, aliquam atque dolorem quibusdam rerum quaerat accusamus veniam, quas assumenda ut. Dolorem nemo deleniti laborum saepe doloremque aliquam tenetur placeat, aperiam voluptate voluptas temporibus odit ut laudantium harum esse eius maxime, neque incidunt quo blanditiis dolores odio accusamus! Vel exercitationem doloribus sapiente impedit doloremque consectetur, porro dolores labore? Error reprehenderit saepe, quasi molestiae eos explicabo ab aliquam iste quod soluta ipsum temporibus commodi eaque sequi pariatur qui. Blanditiis quia ducimus sequi aliquam vel dolor excepturi, quo totam atque unde at ratione maxime reiciendis numquam. Ipsam, corrupti eveniet? Modi.</div>
+        </div>
+        <div class="oval">WELCOME TO SIGMA WEB DEVELOPMENT COURSE PRACTICE</div>
+       </main>
+       <footer>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy;
+All Rights Are Reserved
+       </footer>
+</body>
+</html>

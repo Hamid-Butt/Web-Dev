@@ -1,0 +1,142 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Array Filter</title>
+</head>
+
+<body>
+    <script>
+        //The Array Filterer: You are building a search feature for your e-commerce site. Write a function named filterProducts that takes an array of product objects and a filter criterion. The function should return a new array containing only the products that match the filter criterion.
+
+        async function filterProducts(products, criteria) {
+            let names = products.map(e=>{
+              return  e.name;
+            });
+            let categories = products.map(e=>{
+              return  e.category;
+            });
+            let prices = products.map(e=>{
+              return  e.price;
+            });
+
+            if(criteria == 'name'){
+              let deviceName =  prompt(`So you have selected ${criteria} option.\n Devices are : \n ${names}\n Enter device name`);
+              products.map(e=>{
+                if(e.name == deviceName)
+                console.log(e)
+              })
+            }
+
+            if(criteria == 'category'){
+              let deviceCategory =  prompt(`So you have selected ${criteria} option.\n Categories are : \n ${Categories}\n Enter device category`);
+              products.map(e=>{
+                if(e.category == deviceCategory)
+                console.log(e)
+              })
+            }
+
+            if(criteria == 'price'){
+              let devicePrice =  prompt(`So you have selected ${criteria} option.\n Devices are : \n ${prices}\n Enter device price`);
+              products.map(e=>{
+                if(e.price == devicePrice)
+                console.log(e)
+              })
+            }
+        }
+
+        async function main() {
+            let products = [
+                {  name: "Laptop", category: "Electronics", price: 1000 },
+                {  name: "Shoes", category: "Fashion", price: 50 },
+                {  name: "Phone", category: "Electronics", price: 500 },
+                {  name: "Headphones", category: "Electronics", price: 80 },
+                {  name: "T-Shirt", category: "Fashion", price: 20 },
+                {  name: "Refrigerator", category: "Home Appliances", price: 600 },
+                {  name: "Microwave", category: "Home Appliances", price: 150 },
+                {  name: "Coffee Maker", category: "Home Appliances", price: 90 },
+                {  name: "Backpack", category: "Fashion", price: 40 },
+                {  name: "Smartwatch", category: "Electronics", price: 200 },
+                {  name: "Gaming Console", category: "Electronics", price: 400 },
+                {  name: "Tablet", category: "Electronics", price: 300 },
+                {  name: "Jacket", category: "Fashion", price: 120 },
+                {  name: "Blender", category: "Home Appliances", price: 70 },
+                {  name: "Sofa", category: "Furniture", price: 800 },
+                {  name: "Dining Table", category: "Furniture", price: 1200 },
+                {  name: "Bed", category: "Furniture", price: 1500 },
+                {  name: "Book", category: "Stationery", price: 15 },
+                {  name: "Pen", category: "Stationery", price: 2 },
+                {  name: "Notebook", category: "Stationery", price: 5 }
+            ];
+            let filterCriteria = prompt("Enter name OR category OR price :");
+           await filterProducts(products,filterCriteria);
+        }
+
+        main();
+    </script>
+</body>
+
+</html> -->
+
+
+
+                <!-- AI CODE  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Array Filter</title>
+</head>
+<body>
+  <script>
+    // Function to filter products
+    function filterProducts(products, criteriaKey, criteriaValue) {
+      return products.filter(product => {
+        // convert both to string to allow flexible comparison
+        return String(product[criteriaKey]).toLowerCase() === String(criteriaValue).toLowerCase();
+      });
+    }
+
+    function main() {
+      let products = [
+        { name: "Laptop", category: "Electronics", price: 1000 },
+        { name: "Shoes", category: "Fashion", price: 50 },
+        { name: "Phone", category: "Electronics", price: 500 },
+        { name: "Headphones", category: "Electronics", price: 20 },
+        { name: "T-Shirt", category: "Fashion", price: 20 },
+        { name: "Refrigerator", category: "Home Appliances", price: 600 },
+        { name: "Microwave", category: "Home Appliances", price: 150 },
+        { name: "Coffee Maker", category: "Home Appliances", price: 90 },
+        { name: "Backpack", category: "Fashion", price: 40 },
+        { name: "Smartwatch", category: "Electronics", price: 200 },
+        { name: "Gaming Console", category: "Electronics", price: 400 },
+        { name: "Tablet", category: "Electronics", price: 300 },
+        { name: "Jacket", category: "Fashion", price: 120 },
+        { name: "Blender", category: "Home Appliances", price: 70 },
+        { name: "Sofa", category: "Furniture", price: 800 },
+        { name: "Dining Table", category: "Furniture", price: 1200 },
+        { name: "Bed", category: "Furniture", price: 1500 },
+        { name: "Book", category: "Stationery", price: 15 },
+        { name: "Pen", category: "Stationery", price: 2 },
+        { name: "Notebook", category: "Stationery", price: 5 }
+      ];
+
+      let criteriaKey = prompt("Enter filter type (name / category / price):").toLowerCase();
+      let criteriaValue = prompt(`Enter ${criteriaKey} value:`);
+
+      let result = filterProducts(products, criteriaKey, criteriaValue);
+
+      if (result.length > 0) {
+        console.log("Matching products:", result);
+      } else {
+        console.log("No matching products found.");
+      }
+    }
+
+    main();
+  </script>
+</body>
+</html>
