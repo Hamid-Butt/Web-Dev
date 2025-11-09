@@ -161,7 +161,7 @@
         let h3 = item.querySelector("h3").innerText.toLowerCase();
         obj.map(e=>{
             if(h3 === e.name){
-                let oldDiv =  document.getElementsByClassName("div");
+                let oldDiv =  document.getElementsByClassName("div");   //This returns HTML Collection Object but has properties of arrays thats why length can be used
                 while(oldDiv.length >0){
                     oldDiv[0].remove();
                 }
